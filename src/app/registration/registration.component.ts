@@ -18,7 +18,6 @@ export class RegistrationComponent implements OnInit {
       date: [''],
       Zip: [''],
       password: [''],
-      confirm_password: [''],
       gender: ['']
     });
     updateProfile(){
