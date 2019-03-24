@@ -1,0 +1,38 @@
+<p>{{data_array[memberId-1].details[recordsId-1].summary}}</p>
+<p>{{videobool}}</p>
+<p>{{data_array[memberId-1].details[recordsId-1].media.source[0]}}</p>
+
+
+<!-- <div *ngIf="videobool">
+    <video width="300" height="200" controls autoplay>
+        <source src="assets/foo.mp4" type="video/mp4" /> Your browser does not support the
+        element.
+        </video>
+</div>
+<div *ngIf="audiobool">
+    <audio controls autoplay>
+        <source src="assets/audio.wav" type="audio/wav" /> Your browser does not support the
+         element.
+        </audio>
+</div> -->
+<div [ngSwitch]="data_array[memberId-1].details[recordsId-1].media.mode">
+<div *ngSwitchCase="'video'">
+    <video width="300" height="200" controls autoplay>
+        <source [src]="mediaurl" type="video/mp4" /> Your browser does not support the
+        element.
+    </video>
+</div>
+<div *ngSwitchCase="'audio'">
+    <audio controls autoplay>
+        <source [src]="mediaurl" type="audio/wav" /> Your browser does not support the
+         element.
+        </audio>
+</div>
+<div *ngSwitchCase="'youtube'">
+<div> <iframe class="embed-responsive-item" [src]=mediaurl  allowfullscreen></iframe></div>
+</div>
+<div *ngSwitchDefault> 
+    NO MEDIA AVAILABLE
+</div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
+<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>

@@ -1,0 +1,31 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent implements OnInit {
+
+  constructor() { 
+  //   $('.owl-carousel').owlCarousel({
+  //     loop: true,
+  //     nav: true,
+  //     items: 1,
+  //     animateOut: 'fadeOut'
+  // })
+
+
+  // $("a.owl-prev").click(function() {
+  //     $("div.owl-prev").click();
+  // })
+  // $("a.owl-next").click(function() {
+  //     $("div.owl-next").click();
+  // })
+
+  }
+
+  ngOnInit() {
+  }
+
+}

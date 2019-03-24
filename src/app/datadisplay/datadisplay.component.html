@@ -1,0 +1,18 @@
+<section class="our-webcoderskull padding-lg">
+<div class="container">
+<ul class="row">
+  <li class="col-12 col-md-6 col-lg-3" *ngFor="let list of data_array">
+      <div class="cnt-block equal-hight" style="height: 349px;">
+        <figure><img src="{{list.profilepic}}" class="img-responsive" alt=""></figure>
+        <h3><a [routerLink]="['/ourteam', list.id]">{{list.name}}</a></h3>
+        <p>{{list.address}}</p>
+        <ul class="follow-us clearfix">
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+  </li>
+  </ul>
+</div>
+</section>
