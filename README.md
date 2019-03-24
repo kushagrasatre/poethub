@@ -42,11 +42,8 @@ User
     gender
     roleId
 UserRole (hard-coded)
-    id: 1
-    roleName : 'peot'
-
-    id: 2
-    roleName : 'normal'
+    id: 1/2
+    roleName : 'peot/normal'
 Poem
     id
     userId
@@ -108,3 +105,10 @@ APIs
         Followers (GET)
         Followers (POST)
         Followers (Patch)
+
+## Dependencies / Technologies
+Express
+MongoDB - Mongoose
+Config
+JWT Token
+Bcrypt
