@@ -79,9 +79,11 @@ Book
 ## APIs
 APIs
     User Registration (POST)
+    Access users (GET)
+    Access a user (GET)
+    Account Edit (Patch)
     Login (POST)
     Logout (GET)
-    Account Edit (Patch)
 
     Poets (GET)
         Poems (GET)
