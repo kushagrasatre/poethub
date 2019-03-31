@@ -8,17 +8,17 @@ const poemsRouter = require('./app/api/poems/router');
 /**
  * Database connection
  */
-const DB_SERVER = 'mongodb';
-const DB_DOMAIN = 'localhost:27017';
+const DB_DOMAIN = 'mongodb';
+const DB_HOST = 'localhost';
+const DB_PORT = '27017';
 const DB_NAME = 'poethub';
 mongoose
-    .connect(`${DB_SERVER}://${DB_DOMAIN}/${DB_NAME}`)
+    .connect(`${DB_DOMAIN}://${DB_HOST}:${DB_PORT}/${DB_NAME}`)
     .then((res) => {
-        console.log('MongoDB connection succecced!');
+        console.log('Connected to MongoDB...');
     })
     .catch((err) => {
-        console.log('MongoDB connection failed');
-        // console.log(err);
+        console.log('Could not connect to MongoDB...');
         process.exit(1);
     });
 
@@ -27,11 +27,7 @@ mongoose
  */
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-// app.use(express.static('/public'));
-
-/**
- * Custom middlewares
- */
+app.use(express.static(__dirname+ '/public'));
 
 /**
  * APIs router
